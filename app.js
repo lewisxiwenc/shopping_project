@@ -3,128 +3,139 @@ const catalog = [
     name: "Kingston DDR5 FURY Beast",
     category: "Ram",
     price: 589.99,
-    image:
-      "https://i5.walmartimages.com/seo/Kingston-FURY-Beast-64GB-2-x-32GB-288-Pin-PC-RAM-DDR5-5600-PC5-44800-Desktop-Memory_40bbc3a8-a1fb-4841-80dc-0b703cdb9b2a.718bd2b74b0fe84c3f1954180cd0bd3c.jpeg",
+    image: "",
   },
   {
     name: "G.Skill Flare X5 memory module 2 x DDR5",
     category: "Ram",
     price: 153.99,
-    image: "https://m.media-amazon.com/images/I/61gD0yqG+AL.jpg",
+    image: "",
   },
   {
     name: "Corsair DDR4 Vengeance LPX Memory",
     category: "Ram",
     price: 170,
-    image:
-      "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRORX7-eXA-RVi_UC_1PQB5Ur-qY_dEA5L3MmMRR5nLCyW6ZUH4-Q7VmGbLcwq_s8oJUFVwrUDrm0rLSh47nyBEDAYSlz0IMaeWinr5sf9FXXs_2B34NlGyMA",
+    image: "",
   },
   {
     name: "RTX 3060",
     category: "GPU",
     price: 329.99,
-    image:
-      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQrcu9j--UsDpwAgzgkDiJLXlbrQZgs6uweJoelBYQrloFQqJ_NhXzHr7GT6eefDYW3taxJGBKyN9cYKJMEZk6n_Au5dc5VJ2jzhYjZDLfPd6Fjk9I7wQV-",
+    image: "",
   },
   {
     name: "RTX 3070",
     category: "GPU",
     price: 499.99,
-    image: "https://m.media-amazon.com/images/I/81761uwFaIL.jpg",
+    image: "",
   },
   {
     name: "RTX 3090",
     category: "GPU",
     price: 2399,
-    image: "https://m.media-amazon.com/images/I/81ZxzeX8YBL.jpg",
+    image: "",
   },
   {
     name: "RX 9070 XT",
     category: "GPU",
     price: 929.99,
-    image: "https://m.media-amazon.com/images/I/81huTBuLV+L.jpg",
+    image: "",
   },
   {
     name: "RTX 4060",
     category: "GPU",
     price: 409.99,
-    image: "https://m.media-amazon.com/images/I/61q0rsE3ezL.jpg",
+    image: "",
   },
   {
     name: "RTX 4070",
     category: "GPU",
     price: 655,
-    image: "https://m.media-amazon.com/images/I/71liIYrRmkL.jpg",
+    image: "",
   },
   {
     name: "RTX 4090",
     category: "GPU",
     price: 3499.99,
+    image: "",
   },
   {
     name: "RTX 5050",
     category: "GPU",
     price: 399,
+    image: "",
   },
   {
     name: "RTX 5070",
     category: "GPU",
     price: 799,
+    image: "",
   },
   {
     name: "Intel Arc B580",
     category: "GPU",
     price: 249,
+    image: "",
   },
   {
     name: "AMD Ryzen 7 7700x",
     category: "CPU",
     price: 219,
+    image: "",
   },
   {
     name: "AMD Ryzen 7 7800X3D",
     category: "CPU",
     price: 347.98,
+    image: "",
   },
   {
     name: "Intel Core i7-14700F",
     category: "CPU",
     price: 329.97,
+    image: "",
   },
   {
     name: "Intel Core i5-12400F",
     category: "CPU",
     price: 169.99,
+    image: "",
   },
   {
     name: "AMD Ryzen 9 7950X3D",
     category: "CPU",
     price: 555.56,
+    image: "",
   },
   {
     name: "ASUS ROG STRIX Z890-E",
     category: "Motherboard",
     price: 299.99,
+    image: "",
   },
   {
     name: "ASRock B550M-C",
     category: "Motherboard",
     price: 89.99,
+    image: "",
   },
   {
     name: "Gigabyte AORUS Z790 ELITE AX",
     category: "Motherboard",
     price: 189.99,
+    image: "",
   },
   {
     name: "ASUS PRIME X870-P WIFI AM5 ATX Motherboard",
     category: "Motherboard",
     price: 189.99,
+    image: "",
   },
   {
     name: "ASUS Prime H610M-A D4-CSM Desktop Motherboard",
     category: "Motherboard",
     price: 126.99,
+    image: "",
   },
 ];
 
@@ -208,13 +219,13 @@ function discountCodes(code) {
   return total;
 }
 
-console.log(filter(catalog, "Ram"));
-console.log(filter(catalog, "CPU"));
-console.log(filter(catalog, "GPU"));
+// console.log(filter(catalog, "Ram"));
+// console.log(filter(catalog, "CPU"));
+// console.log(filter(catalog, "GPU"));
 
-AddToCart(cartTable, "ASUS ROG STRIX Z890-E");
-AddToCart(cartTable, "RTX 5070");
-AddToCart(cartTable, "RTX 5070");
-discountCodes("ilovepcs");
-showTotal();
-printCart(cartTable);
+// AddToCart(cartTable, "ASUS ROG STRIX Z890-E");
+// AddToCart(cartTable, "RTX 5070");
+// AddToCart(cartTable, "RTX 5070");
+// discountCodes("ilovepcs");
+// showTotal();
+// printCart(cartTable);
