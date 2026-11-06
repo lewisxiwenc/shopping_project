@@ -225,10 +225,12 @@ function inject() {
   const header = document.querySelector("#header");
   const category = document.querySelector("#category");
   const price = document.querySelector("#price");
+  const image = document.querySelector("#image");
 
   header.textContent = `${catalog[item].name}`;
   category.textContent = `Category: ${catalog[item].category}`;
   price.textContent = `Price: $${catalog[item].price}`;
+  image.setAttribute("src", catalog[item].image);
 }
 
 inject();

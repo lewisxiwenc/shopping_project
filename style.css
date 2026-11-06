@@ -5,8 +5,7 @@ body,
 * {
   background-color: #212227;
   padding: 0;
-  margin: 3px;
-  font-family: Helvetica;
+  margin: 10px;
 }
 .container {
   padding: 0;
@@ -35,4 +34,5 @@ body,
 .text {
   color: #ffffff;
   background-color: #2a2e41;
+  font-family: Helvetica;
 }
