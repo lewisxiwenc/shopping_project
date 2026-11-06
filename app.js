@@ -219,6 +219,20 @@ function discountCodes(code) {
   return total;
 }
 
+let item = 0;
+
+function inject() {
+  const header = document.querySelector("#header");
+  const category = document.querySelector("#category");
+  const price = document.querySelector("#price");
+
+  header.textContent = `${catalog[item].name}`;
+  category.textContent = `Category: ${catalog[item].category}`;
+  price.textContent = `Price: $${catalog[item].price}`;
+}
+
+inject();
+
 // console.log(filter(catalog, "Ram"));
 // console.log(filter(catalog, "CPU"));
 // console.log(filter(catalog, "GPU"));

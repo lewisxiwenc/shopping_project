@@ -1,9 +1,38 @@
+/* #8693AB, #BDD4E7, #212227, #637074, #AAB9CF, #30333f, #16171d */
+
 html,
 body,
 * {
+  background-color: #212227;
   padding: 0;
+  margin: 3px;
+  font-family: Helvetica;
 }
-
+.container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #16171d;
+  height: 60vh;
+  padding: 35px;
+  margin: 0;
+  border-radius: 1rem;
+}
 .box {
-  background-color: red;
+  background-color: #2a2e41;
+  padding: 5px;
+  margin: 0;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1rem;
+}
+.text {
+  color: #ffffff;
+  background-color: #2a2e41;
 }
