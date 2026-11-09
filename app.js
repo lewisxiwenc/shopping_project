@@ -230,6 +230,7 @@ function inject() {
   // price.textContent = `Price: $${catalog[item].price}`;
   // image.setAttribute("src", catalog[item].image);
   let item = 0;
+
   const container = document.querySelector(".container");
 }
 inject();
