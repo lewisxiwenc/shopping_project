@@ -232,7 +232,6 @@ function inject() {
   let item = 0;
   const container = document.querySelector(".container");
 }
-
 inject();
 
 // console.log(filter(catalog, "Ram"));
