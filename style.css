@@ -10,14 +10,15 @@ body,
 .container {
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #16171d;
-  height: 60vh;
+  height: 100vh;
   padding: 35px;
   margin: 0;
   border-radius: 1rem;
+  gap: 50px;
 }
 .box {
   background-color: #2a2e41;
@@ -35,4 +36,24 @@ body,
   color: #ffffff;
   background-color: #2a2e41;
   font-family: Helvetica;
+}
+#image {
+  height: 170px;
+  width: auto;
+  padding: 5px;
+}
+.button {
+  background-color: #f87903;
+  height: 3rem;
+  padding: 0 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.1s;
+  border: 2px solid #c96303;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.button:hover {
+  background-color: #814003;
 }
