@@ -219,29 +219,32 @@ function discountCodes(code) {
   return total;
 }
 
-function inject() {
-  // const header = document.querySelector("#header");
-  // const category = document.querySelector("#category");
-  // const price = document.querySelector("#price");
-  // const image = document.querySelector("#image");
+const arrayTable = [];
 
-  // header.textContent = `${catalog[item].name}`;
-  // category.textContent = `Category: ${catalog[item].category}`;
-  // price.textContent = `Price: $${catalog[item].price}`;
-  // image.setAttribute("src", catalog[item].image);
-  let item = 0;
-
+function inject(items) {
   const container = document.querySelector(".container");
+  container.insertAdjacentHTML(
+    "beforeend",
+    `
+    <div class="box">
+      <h2 class="text" id="header">${items.name}</h2>
+      <p class="text" id="category">${items.category}</p>
+      <p class="text" id="price">$${items.price}</p>
+      <img id="image" src=${items.image} />
+      <button class="button">Add to Cart</button>
+    </div>
+    `,
+  );
 }
-inject();
 
-// console.log(filter(catalog, "Ram"));
-// console.log(filter(catalog, "CPU"));
-// console.log(filter(catalog, "GPU"));
+catalog.forEach((item) => {
+  inject(item);
+});
 
-// AddToCart(cartTable, "ASUS ROG STRIX Z890-E");
-// AddToCart(cartTable, "RTX 5070");
-// AddToCart(cartTable, "RTX 5070");
-// discountCodes("ilovepcs");
-// showTotal();
-// printCart(cartTable);
+// <div class="box">
+//     <h2 class="text" id="header">item</h2>
+//     <p class="text" id="category">category</p>
+//     <p class="text" id="price">price</p>
+//     <img id="image" src="" />
+//     <button class="button">Add to Cart</button>
+// </div>
