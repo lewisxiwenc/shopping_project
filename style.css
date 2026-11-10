@@ -3,9 +3,8 @@
 html,
 body,
 * {
-  background-color: #212227;
   padding: 0;
-  margin: 10px;
+  margin: 0;
 }
 .container {
   padding: 0;
@@ -16,7 +15,7 @@ body,
   background-color: #16171d;
   height: auto;
   padding: 35px;
-  margin: 0;
+  margin: 10px;
   border-radius: 1rem;
   gap: 50px;
 }
@@ -35,7 +34,6 @@ body,
 }
 .text {
   color: #ffffff;
-  background-color: #2a2e41;
   font-family: Helvetica;
 }
 #image {
@@ -57,4 +55,20 @@ body,
 }
 .button:hover {
   background-color: #814003;
+}
+.hero {
+  background-image:
+    linear-gradient(rgba(90, 100, 130, 0.5)), url("project_images/hero_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
 }
