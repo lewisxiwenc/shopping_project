@@ -14,7 +14,7 @@ body,
   justify-content: center;
   align-items: center;
   background-color: #16171d;
-  height: 100vh;
+  height: auto;
   padding: 35px;
   margin: 0;
   border-radius: 1rem;
@@ -23,14 +23,15 @@ body,
 .box {
   background-color: #2a2e41;
   padding: 5px;
-  margin: 0;
+  /* margin: 1; */
   width: 350px;
   height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   border-radius: 1rem;
+  text-align: center;
 }
 .text {
   color: #ffffff;

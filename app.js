@@ -36,12 +36,6 @@ const catalog = [
     image: "project_images/rtx3090.jpg",
   },
   {
-    name: "RX 9070 XT",
-    category: "GPU",
-    price: 929.99,
-    image: "project_images/rx9070xt.jpg",
-  },
-  {
     name: "RTX 4060",
     category: "GPU",
     price: 409.99,
@@ -70,6 +64,12 @@ const catalog = [
     category: "GPU",
     price: 799,
     image: "project_images/rtx5070.jpg",
+  },
+  {
+    name: "RX 9070 XT",
+    category: "GPU",
+    price: 929.99,
+    image: "project_images/rx9070xt.jpg",
   },
   {
     name: "Intel Arc B580",
@@ -240,11 +240,3 @@ function inject(items) {
 catalog.forEach((item) => {
   inject(item);
 });
-
-// <div class="box">
-//     <h2 class="text" id="header">item</h2>
-//     <p class="text" id="category">category</p>
-//     <p class="text" id="price">price</p>
-//     <img id="image" src="" />
-//     <button class="button">Add to Cart</button>
-// </div>
