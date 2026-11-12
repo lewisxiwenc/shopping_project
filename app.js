@@ -8,7 +8,7 @@ const catalog = [
   {
     name: "G.Skill Flare X5 memory module 2 x DDR5",
     category: "Ram",
-    price: 153.99,
+    price: 599.99,
     image: "project_images/g.skill_ddr5_ram.jpg",
   },
   {

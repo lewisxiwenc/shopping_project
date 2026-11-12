@@ -15,29 +15,29 @@ body,
   background-color: #16171d;
   height: auto;
   padding: 35px;
-  margin: 10px;
-  border-radius: 1rem;
-  gap: 50px;
+  margin: 0;
+  gap: 100px;
 }
 .box {
   background-color: #2a2e41;
-  padding: 5px;
-  /* margin: 1; */
+  padding: 10px;
+  margin: 1;
   width: 350px;
   height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   border-radius: 1rem;
   text-align: center;
 }
 .text {
   color: #ffffff;
   font-family: Helvetica;
+  padding: 10px;
 }
 #image {
-  height: 170px;
+  height: 190px;
   width: auto;
   padding: 5px;
 }
@@ -52,6 +52,7 @@ body,
   border-radius: 0.5rem;
   font-size: 1.5rem;
   margin: 1rem;
+  margin-top: auto;
 }
 .button:hover {
   background-color: #814003;
@@ -71,4 +72,8 @@ body,
   font-size: 35px;
   margin: 0;
   padding: 0;
+}
+.filtercontainer {
+  background-color: #212227;
+  text-align: center;
 }
