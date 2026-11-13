@@ -139,21 +139,10 @@ const catalog = [
   },
 ];
 
+const container = document.querySelector(".container");
+
 let cartTable = [];
 let total = 0;
-
-function filter(table, category) {
-  let filterTable = [];
-  for (item of table) {
-    if (item.category == category) {
-      filterTable.push(item.name);
-    }
-  }
-  if (filterTable.length === 0) {
-    return "Category not found!";
-  }
-  return filterTable;
-}
 
 function AddToCart(cart, item) {
   const targetItem = catalog.find((i) => i.name === item);
@@ -222,7 +211,6 @@ function discountCodes(code) {
 const arrayTable = [];
 
 function inject(items) {
-  const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "beforeend",
     `
@@ -239,4 +227,27 @@ function inject(items) {
 
 catalog.forEach((item) => {
   inject(item);
+});
+
+function filter(table, category) {
+  let filterTable = [];
+  for (item of table) {
+    if (item.category == category) {
+      filterTable.push(item.name);
+    }
+  }
+  if (filterTable.length === 0) {
+    return "Category not found!";
+  }
+  return filterTable;
+}
+
+const f_btns = document.querySelectorAll("#filter");
+f_btns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    console.log(`${btn.dataset.category} clicked`);
+    let category_data = btn.dataset.category;
+    filter(category, category_data);
+    console.log(filterTable);
+  });
 });
