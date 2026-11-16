@@ -57,6 +57,9 @@ body,
 .button:hover {
   background-color: #814003;
 }
+#filter {
+  width: 190px;
+}
 .hero {
   background-image:
     linear-gradient(rgba(90, 100, 130, 0.5)), url("project_images/hero_image.jpg");

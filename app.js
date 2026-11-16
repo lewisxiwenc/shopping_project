@@ -144,6 +144,8 @@ const container = document.querySelector(".container");
 let cartTable = [];
 let total = 0;
 
+let filterTable = [];
+
 function AddToCart(cart, item) {
   const targetItem = catalog.find((i) => i.name === item);
   if (targetItem) {
@@ -208,46 +210,48 @@ function discountCodes(code) {
   return total;
 }
 
-const arrayTable = [];
+function inject(catalog) {
+  container.innerHTML = "";
 
-function inject(items) {
-  container.insertAdjacentHTML(
-    "beforeend",
-    `
+  catalog.forEach((item) => {
+    container.insertAdjacentHTML(
+      "beforeend",
+      `
     <div class="box">
-      <h2 class="text" id="header">${items.name}</h2>
-      <p class="text" id="category">${items.category}</p>
-      <p class="text" id="price">$${items.price}</p>
-      <img id="image" src=${items.image} />
+      <h2 class="text" id="header">${item.name}</h2>
+      <p class="text" id="category">${item.category}</p>
+      <p class="text" id="price">$${item.price}</p>
+      <img id="image" src=${item.image} />
       <button class="button">Add to Cart</button>
     </div>
     `,
-  );
+    );
+  });
 }
 
-catalog.forEach((item) => {
-  inject(item);
-});
-
 function filter(table, category) {
-  let filterTable = [];
+  filterTable = [];
   for (item of table) {
     if (item.category == category) {
-      filterTable.push(item.name);
+      filterTable.push(item);
     }
   }
   if (filterTable.length === 0) {
-    return "Category not found!";
+    console.log("Category not found!");
   }
-  return filterTable;
 }
 
 const f_btns = document.querySelectorAll("#filter");
 f_btns.forEach((btn) => {
   btn.addEventListener("click", function () {
-    console.log(`${btn.dataset.category} clicked`);
-    let category_data = btn.dataset.category;
-    filter(category, category_data);
-    console.log(filterTable);
+    if (btn.dataset.category == "Reset") {
+      filterTable = [];
+      inject(catalog);
+    } else {
+      filter(catalog, btn.dataset.category);
+      inject(filterTable);
+    }
   });
 });
+
+inject(catalog);
