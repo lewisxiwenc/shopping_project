@@ -140,6 +140,7 @@ const catalog = [
 ];
 
 const container = document.querySelector(".container");
+const codes = ["ilovepcs", "4060isbad", "thisisapcpartshop"];
 
 let cartTable = [];
 let total = 0;
@@ -191,8 +192,6 @@ function printCart(cart) {
   console.log(nameCart);
 }
 
-const codes = ["ilovepcs", "4060isbad", "cat"];
-
 let discountApplied = false;
 function discountCodes(code) {
   const foundCode = codes.find((i) => i === code);
@@ -210,6 +209,15 @@ function discountCodes(code) {
   return total;
 }
 
+function btn_functions() {
+  let btns = document.querySelectorAll("#add_to_cart");
+  btns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      console.log(btn.dataset.item);
+    });
+  });
+}
+
 function inject(catalog) {
   container.innerHTML = "";
 
@@ -222,11 +230,12 @@ function inject(catalog) {
       <p class="text" id="category">${item.category}</p>
       <p class="text" id="price">$${item.price}</p>
       <img id="image" src=${item.image} />
-      <button class="button">Add to Cart</button>
+      <button class="button" id="add_to_cart" data-item="${item.name}">Add to Cart</button>
     </div>
     `,
     );
   });
+  btn_functions();
 }
 
 function filter(table, category) {
