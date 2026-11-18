@@ -68,11 +68,11 @@ body,
   background-color: #814003;
 }
 #showcart {
-  background-color: #c015c0;
-  border: 2px solid #aa15aa;
+  background-color: #5115c0;
+  border: 2px solid #3d15aa;
 }
 #showcart:hover {
-  background-color: #530b53;
+  background-color: #160b53;
 }
 .hero {
   background-image:

@@ -214,6 +214,7 @@ function btn_functions() {
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
       AddToCart(cartTable, btn.dataset.item);
+      printCart(cartTable);
     });
   });
 }
