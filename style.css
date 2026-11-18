@@ -52,19 +52,19 @@ body,
   margin: 1rem;
   margin-top: auto;
 }
-#add_to_cart {
+.add_to_cart {
   background-color: #f87903;
   border: 2px solid #c96303;
 }
-#add_to_cart:hover {
+.add_to_cart:hover {
   background-color: #814003;
 }
-#filter {
+.filter {
   width: 190px;
   background-color: #f87903;
   border: 2px solid #c96303;
 }
-#filter:hover {
+.filter:hover {
   background-color: #814003;
 }
 #showcart {

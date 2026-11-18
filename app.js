@@ -210,7 +210,7 @@ function discountCodes(code) {
 }
 
 function btn_functions() {
-  let btns = document.querySelectorAll("#add_to_cart");
+  let btns = document.querySelectorAll(".add_to_cart");
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
       AddToCart(cartTable, btn.dataset.item);
@@ -227,11 +227,11 @@ function inject(catalog) {
       "beforeend",
       `
     <div class="box">
-      <h2 class="text" id="header">${item.name}</h2>
-      <p class="text" id="category">${item.category}</p>
-      <p class="text" id="price">$${item.price}</p>
+      <h2 class="text header">${item.name}</h2>
+      <p class="text category">${item.category}</p>
+      <p class="text price">$${item.price}</p>
       <img id="image" src=${item.image} />
-      <button class="button" id="add_to_cart" data-item="${item.name}">Add to Cart</button>
+      <button class="button add_to_cart" data-item="${item.name}">Add to Cart</button>
     </div>
     `,
     );
@@ -251,7 +251,7 @@ function filter(table, category) {
   }
 }
 
-const f_btns = document.querySelectorAll("#filter");
+const f_btns = document.querySelectorAll(".filter");
 f_btns.forEach((btn) => {
   btn.addEventListener("click", function () {
     if (btn.dataset.category == "Reset") {
