@@ -213,7 +213,7 @@ function btn_functions() {
   let btns = document.querySelectorAll("#add_to_cart");
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
-      console.log(btn.dataset.item);
+      AddToCart(cartTable, btn.dataset.item);
     });
   });
 }

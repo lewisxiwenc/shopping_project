@@ -16,7 +16,7 @@ body,
   height: auto;
   padding: 35px;
   margin: 0;
-  gap: 100px;
+  gap: 75px;
 }
 .box {
   background-color: #2a2e41;
@@ -42,23 +42,37 @@ body,
   padding: 5px;
 }
 .button {
-  background-color: #f87903;
   height: 3rem;
   padding: 0 1rem;
   color: #ffffff;
   cursor: pointer;
   transition: all 0.1s;
-  border: 2px solid #c96303;
   border-radius: 0.5rem;
   font-size: 1.5rem;
   margin: 1rem;
   margin-top: auto;
 }
-.button:hover {
+#add_to_cart {
+  background-color: #f87903;
+  border: 2px solid #c96303;
+}
+#add_to_cart:hover {
   background-color: #814003;
 }
 #filter {
   width: 190px;
+  background-color: #f87903;
+  border: 2px solid #c96303;
+}
+#filter:hover {
+  background-color: #814003;
+}
+#showcart {
+  background-color: #c015c0;
+  border: 2px solid #aa15aa;
+}
+#showcart:hover {
+  background-color: #530b53;
 }
 .hero {
   background-image:
@@ -82,4 +96,9 @@ body,
 }
 #filterheader {
   font-size: 50px;
+}
+.cartbutton {
+  position: fixed;
+  bottom: 5px;
+  left: 1px;
 }
