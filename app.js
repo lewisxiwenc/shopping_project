@@ -264,9 +264,4 @@ f_btns.forEach((btn) => {
   });
 });
 
-const cartbutton = document.querySelector("#showcart");
-cartbutton.addEventListener("click", function () {
-  console.log("CLICKED");
-});
-
 inject(catalog);
