@@ -140,6 +140,7 @@ const catalog = [
 ];
 
 const container = document.querySelector(".container");
+const cart_container = document.querySelector(".cartbox");
 const codes = ["ilovepcs", "4060isbad", "thisisapcpartshop"];
 
 let cartTable = [];
@@ -211,10 +212,23 @@ function discountCodes(code) {
 
 function btn_functions() {
   let btns = document.querySelectorAll(".add_to_cart");
+  const totalcount = document.querySelector("#money");
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
       AddToCart(cartTable, btn.dataset.item);
-      printCart(cartTable);
+
+      cart_container.innerHTML = "";
+      cartTable.forEach((item) => {
+        cart_container.insertAdjacentHTML(
+          "beforeend",
+          `
+        <div class="text item_info">
+          <p>${item.name} $${item.price} x${item.quantity}</p>
+        </div>`,
+        );
+        let total_money = Math.round(total * 100) / 100;
+        totalcount.textContent = `Total: $${total_money}`;
+      });
     });
   });
 }
