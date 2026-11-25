@@ -141,6 +141,7 @@ const catalog = [
 
 const container = document.querySelector(".container");
 const cart_container = document.querySelector(".cartbox");
+const totalcount = document.querySelector("#money");
 const codes = ["ilovepcs", "4060isbad", "thisisapcpartshop"];
 
 let cartTable = [];
@@ -172,7 +173,6 @@ function RemoveFromCart(cart, item) {
   const cartItem = cart[index];
   cartItem.quantity--;
   total -= cartItem.price;
-
   if (cartItem.quantity === 0) {
     cart.splice(index, 1);
   }
@@ -212,7 +212,6 @@ function discountCodes(code) {
 
 function btn_functions() {
   let btns = document.querySelectorAll(".add_to_cart");
-  const totalcount = document.querySelector("#money");
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
       AddToCart(cartTable, btn.dataset.item);
@@ -222,12 +221,42 @@ function btn_functions() {
         cart_container.insertAdjacentHTML(
           "beforeend",
           `
-        <div class="text item_info">
-          <p>${item.name} $${item.price} x${item.quantity}</p>
+        <div class="cart_item">
+          <p class="text item_info">${item.name} $${item.price} x${item.quantity}</p>
+          <button class="button remove_item" data-item="${item.name}">X</button>
         </div>`,
         );
+        r_btn_functions();
         let total_money = Math.round(total * 100) / 100;
         totalcount.textContent = `Total: $${total_money}`;
+      });
+    });
+  });
+}
+
+function r_btn_functions() {
+  let r_btns = document.querySelectorAll(".remove_item");
+  r_btns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      RemoveFromCart(cartTable, btn.dataset.item);
+
+      cart_container.innerHTML = "";
+      cartTable.forEach((item) => {
+        cart_container.insertAdjacentHTML(
+          "beforeend",
+          `
+        <div class="cart_item">
+          <p class="text item_info">${item.name} $${item.price} x${item.quantity}</p>
+          <button class="button remove_item" data-item="${item.name}">X</button>
+        </div>`,
+        );
+        r_btn_functions();
+        let total_money = Math.round(total * 100) / 100;
+        if (cart_container.innerHTML == "") {
+          totalcount.textContent = `Total: $0`;
+        } else {
+          totalcount.textContent = `Total: $${total_money}`;
+        }
       });
     });
   });
